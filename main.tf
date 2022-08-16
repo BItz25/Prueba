@@ -16,7 +16,7 @@ resource "docker_image" "nginx" {
 
 resource "docker_container" "nginx" {
   image = docker_image.nginx.latest
-  name  = "brendacruz25"   // Cambiarla dinámicamente por la Variable env.DOCKER_REPO que está en el Jenkins
+  name  = "bren"   // Cambiarla dinámicamente por la Variable env.DOCKER_REPO que está en el Jenkins
   ports {
     internal = 80
     external = 81  // Cambiarla dinámicamente por la variable CONTAINER_PORT que está en el Jenkins.
