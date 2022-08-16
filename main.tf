@@ -7,21 +7,18 @@ terraform {
   }
 }
 
-variable "reponame" {}
-variable "container_port" {}
-
 provider "docker" {}
 
 resource "docker_image" "nginx" {
   name         = "nginx:latest"
-  keep_locally = true
+  keep_locally = false
 }
 
 resource "docker_container" "nginx" {
   image = docker_image.nginx.latest
-  name  = "var.reponame"   // Cambiarla dinámicamente por la Variable env.DOCKER_REPO que está en el Jenkins
+  name  = "brendacruz25"  // Cambiarla dinámicamente por la Variable env.DOCKER_REPO que está en el Jenkins 
   ports {
     internal = 80
-    external = var.container_port  // Cambiarla dinámicamente por la variable CONTAINER_PORT que está en el Jenkins.
+    external = 81  // Cambiarla dinámicamente por la variable CONTAINER_PORT que está en el Jenkins
   }
 }
