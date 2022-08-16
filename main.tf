@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     docker = {
-      source = "brendacruz25/docker"
+      source = "kreuzwerker/docker"
       version = "~> 2.15.0"
     }
   }
