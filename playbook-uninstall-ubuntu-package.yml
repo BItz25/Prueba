@@ -1,0 +1,6 @@
+- hosts: all
+  tasks:
+    - name: "Uninstall Traceroute Package"
+      apt:
+        name: ['traceroute']
+        state: absent
