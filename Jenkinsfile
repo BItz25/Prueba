@@ -2,8 +2,8 @@ def genaralvars () {
 
     env.GIT_REPO = 'https://github.com/BItz25/Prueba.git'
     env.GIT_BRANCH = 'main'
-    env.DOCKER_REPO = 'repo'
-    CONTAINER_PORT= '80'
+    env.DOCKER_REPO = 'brendacruz25'
+    CONTAINER_PORT= '81'
 
 }
 
